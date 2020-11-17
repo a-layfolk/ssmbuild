@@ -1,24 +1,23 @@
 package com.layfolk.dao;
 
 import com.layfolk.pojo.Books;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
 
 public interface BookMapper {
 
-    //增加一本书
-    int addBook(Books books);
+    //增加一个Book
+    int addBook(Books book);
 
-    //删除一本书
-    int deleteBookById(@Param("BookId") int id);
+    //根据id删除一个Book
+    int deleteBookById(int id);
 
-    //修改一本书
+    //更新Book
     int updateBook(Books books);
 
-    //查询一本书
-    Books queryBookById(@Param("BookId")int id);
+    //根据id查询,返回一个Book
+    Books queryBookById(int id);
 
-    //查询所有的书
+    //查询全部Book,返回list集合
     List<Books> queryAllBook();
+
 }

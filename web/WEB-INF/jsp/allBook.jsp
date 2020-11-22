@@ -23,12 +23,13 @@
             <div class="col-md-4 column">
                 <%--toAddBook--%>
                 <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAddBook">新增书籍</a>
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/allBook">查看全部书籍</a>
             </div>
             <div class="col-md-4 column">
                 <%--查询书籍--%>
-                <form action="" method="post">
+                <form class="form-inline" action="${pageContext.request.contextPath}/book/queryBook" method="post">
                     <input type="text" name="queryBookName" class="form-control" placeholder="请输入要查询的书籍名字">
-                    <input type="submit" value="查询">
+                    <input class="btn btn-primary" type="submit" value="查询">
                 </form>
             </div>
         </div>
